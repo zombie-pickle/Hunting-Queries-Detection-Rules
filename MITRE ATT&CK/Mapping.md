@@ -2,19 +2,17 @@
 
 This page includes the mapping of KQL queries to the [MITRE ATT&CK](https://attack.mitre.org/) framework. The framework is a knowledge base of adversary tactics and techniques based on real-world observations.
 
-This section only includes references to queries that can be mapped in the MITRE ATT&CK Framework.
+This section only includes references to queries that can be mapped in the MITRE ATT&CK Framework. Reconnaissance and Resource Development are out of scope. 
 
-## Reconnaissance
-to be implemented
-## Resource Development
-to be implemented
 ## Initial Access
-
 | Technique ID | Title    | Query    |
 | ---  | --- | --- |
 | T1078.004 | Valid Accounts: Cloud Accounts |[New Authentication AppDetected](../Azure%20Active%20Directory/NewAuthenticationAppDetected.md)|
 | T1566.001 | Phishing: Spearphishing Attachment |[Executable Email Attachment Recieved](../Office%20365/Email%20-%20ExecutableFileRecieved.md)|
 | T1566.001 | Phishing: Spearphishing Attachment | [Macro Attachment Opened From Rare Sender](../Office%20365/Email%20-%20MacroAttachmentOpenedFromRareSender.md)|
+| T1566.001 | Phishing: Spearphishing Attachment | [ASR Executable Content Triggered](../Office%20365/Email%20-%20ASRExecutableContentTriggered.md) |
+| T1566.001 | Phishing: Spearphishing Attachment | [Hunt: AsyncRAT OneNote Delivery](../Threat%20Hunting/Behavior%20-%20AsyncRATInitialAccess.md) |
+| T1566.002 | Phishing: Spearphishing Link | [Email Safe Links Trigger](../Office%20365/Email%20-%20SafeLinksTrigger.md) |
 
 ## Execution
 to be implemented
@@ -23,6 +21,9 @@ to be implemented
 | Technique ID | Title    | Query    |
 | ---  | --- | --- |
 | T1136.001 | Create Account: Local Account | [Local Account Creation](../Defender%20For%20Endpoint/LocalAccountCreated.md) |
+| T1136.003 | Create Account: Cloud Account | [Cloud Persistence Activity By User AtRisk](../Azure%20Active%20Directory/CloudPersistenceActivityByUserAtRisk.md) |
+|  T1078.004 | Valid Accounts: Cloud Accounts | [Cloud Persistence Activity By User AtRisk](../Azure%20Active%20Directory/CloudPersistenceActivityByUserAtRisk.md)|
+| T1137 | Office Application Startup | [ASR Executable Office Content](../Defender%20For%20Endpoint/AsrExecutableOfficeContent.md) |
 
 ## Privilege Escalation
 
@@ -54,10 +55,10 @@ to be implemented
 | T1018 | Remote System Discovery | [Anomalous SMB Sessions Created](../Defender%20For%20Endpoint/AnomalousSMBSessionsCreated.md)|
 | T1040 | Network Sniffing | [Windows Network Sniffing](../Defender%20For%20Endpoint/WindowsNetworkSniffing.md) |
 | T1069.003 | Permission Groups Discovery: Cloud Groups | [Azure AD Download All Users](../Azure%20Active%20Directory/AzureADDownloadAllUsers.md) |
+| T1069.003 | Permission Groups Discovery: Cloud Groups | [Cloud Discovery By User At Risk](../Azure%20Active%20Directory/CloudDiscoveryByUserAtRisk.md) |
 | T1087.004 | Account Discovery: Cloud Account |[Azure AD Download All Users](../Azure%20Active%20Directory/AzureADDownloadAllUsers.md)|
 | T1087.004 | Account Discovery: Cloud Account | [Encoded Powershell Discovery Requests](../Defender%20For%20Endpoint/PowerShellEncodedReconActivities.md) |
 | T1615 | Group Policy Discovery |[Anomalous Group Policy Discovery](../Defender%20For%20Identity/AnomalousGroupPolicyDiscovery.md)|
-
 
 ## Lateral Movement
 
